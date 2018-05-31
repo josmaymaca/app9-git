@@ -23,7 +23,7 @@ function getPosition(){
 	}
 	
 	var watchID=navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
-	function onSuccees(position){
+	function onSuccess(position){
 		
 		alert('latitude:'	+ position.coords.latitude	+ '\n' +
 		'Longitude:'	+ position.coords.longitude		+ '\n' +
@@ -54,10 +54,12 @@ function watchPosition(){
 		$('#altitud').html(position.coords.altitude);
 		$('#accuracy').html(position.coords.accuracy);
 		$('#aaccuracy').html(position.coords.altitudeAccuracy);
-		$('#heading').html(position.coords.heading);
+		$('#headingg').html(position.coords.heading);
 		$('#speed').html(position.coords.speed);
-		$('#').html(position.timestamp);
+		$('#timestamp').html(position.timestamp);
 	}
 	
 	function onError(error){
 		alert('code:' +error.code	+ '\n' + 'message:' + error.message + '\n' );
+	}
+}
